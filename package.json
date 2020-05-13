@@ -1,0 +1,33 @@
+{
+  "name": "fake-artist-online",
+  "version": "1.0.0",
+  "description": "Online version of the party game \"A Fake Artist Goes to New York\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MJ-Schnee/fake-artist-online.git"
+  },
+  "keywords": [],
+  "author": "MJ Schnee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MJ-Schnee/fake-artist-online/issues"
+  },
+  "homepage": "https://github.com/MJ-Schnee/fake-artist-online#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3"
+  },
+  "engines": {
+    "node": "10.15.3"
+  }
+}
