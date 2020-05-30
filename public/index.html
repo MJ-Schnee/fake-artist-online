@@ -14,13 +14,37 @@
 
 <body>
     <main>
-        <div id="title-screen-text">
-            <h2>A</h2>
-            <h1>Fake Artist</h1>
-            <h2>Goes to New York</h2>
+        <div id="title-screen-wrapper">
+            <div class="text">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <br>
+            <div class="buttons">
+                <button id="create-button">CREATE</button>
+                <button id="join-button">JOIN</button>
+                <button id="instructions-button">INSTRUCTIONS</button>
+            </div>
         </div>
     </main>
 
+    <script id="title-screen-template" type="text/template">
+        <div id="title-screen-wrapper">
+            <div class="text">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <br>
+            <div class="buttons">
+                <button class="button" id="create-button">Create</button>
+                <button class="button" id="join-button">Join</button>
+            </div>
+        </div>
+    </script>
 </body>
 
 </html>
