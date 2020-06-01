@@ -6,16 +6,64 @@
     <title>Fake Artist Online</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
+    <script id="title-screen-template" type="text/template">
+        <div id="title-screen-wrapper">
+            <div class="title">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <br>
+            <div class="buttons">
+                <button class="button" id="create-button" onclick="$('main').html($('#create-template').html())">Create</button>
+                <button class="button" id="join-button" onclick="$('main').html($('#join-template').html())">Join</button>
+                <button class="button" id="instructions-button" onclick="$('main').html($('#instructions-template').html())">Instructions</button>
+            </div>
+        </div>
+    </script>
+
+    <script id="instructions-template" type="text/template">
+        <div id="instructions-wrapper">
+            <div class="title">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
+            <br>
+            <br>
+            <h3>What is "A Fake Artist Goes to New York"?</h3>
+            <p id="description">"A Fake Artist Goes to New York" is a party game for 5-10 players. 
+                Players take turns being the Question Master, whose role is to set a category, 
+                write a word within that category on dry erase cards, and hand those out to 
+                other players as artists. At the same time, one player will have only an "X" 
+                written on his card: they are the fake artist!
+                <br>
+                Players will then go around the table twice, drawing one contiguous stroke 
+                each on a paper to draw the word established by the Question Master, then 
+                guess who the fake artist is. If the fake artist is not caught, both the fake 
+                artist and the Question Master earn points; if the fake artist is caught and 
+                cannot guess what the word is, the artists earn points.
+            </p>
+        </div>
+    </script>
+    
     <script>
         var socket = io();
+
+        document.querySelector('main').innerHTML = $('#create-template').html()
     </script>
 </head>
 
 <body>
     <main>
         <div id="title-screen-wrapper">
-            <div class="text">
+            <div class="title">
                 <h2>A</h2>
                 <h1>Fake Artist</h1>
                 <h2>Goes to New York</h2>
@@ -23,28 +71,12 @@
             <br>
             <br>
             <div class="buttons">
-                <button id="create-button">CREATE</button>
-                <button id="join-button">JOIN</button>
-                <button id="instructions-button">INSTRUCTIONS</button>
+                <button class="button" id="create-button" onclick="$('main').html($('#create-template').html())">Create</button>
+                <button class="button" id="join-button" onclick="$('main').html($('#join-template').html())">Join</button>
+                <button class="button" id="instructions-button" onclick="$('main').html($('#instructions-template').html())">Instructions</button>
             </div>
         </div>
     </main>
-
-    <script id="title-screen-template" type="text/template">
-        <div id="title-screen-wrapper">
-            <div class="text">
-                <h2>A</h2>
-                <h1>Fake Artist</h1>
-                <h2>Goes to New York</h2>
-            </div>
-            <br>
-            <br>
-            <div class="buttons">
-                <button class="button" id="create-button">Create</button>
-                <button class="button" id="join-button">Join</button>
-            </div>
-        </div>
-    </script>
 </body>
 
 </html>
