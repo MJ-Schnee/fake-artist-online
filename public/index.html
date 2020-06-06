@@ -35,8 +35,7 @@
             </div>
             <br>
             <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
-            <br>
-            <br>
+            <div class="spacer-2"></div>
             <h3>What is "A Fake Artist Goes to New York"?</h3>
             <p id="description">"A Fake Artist Goes to New York" is a party game for 4-10 players. 
                 Players take turns being the Question Master, whose role is to set a category, 
@@ -62,7 +61,7 @@
             </div>
             <br>
             <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
-            <div class="spacer"></div>
+            <div class="spacer-3"></div>
             <h2 class="room-id">Room ID</h2>
             <h1 class="room-id">0000</h1>
             <br>
@@ -70,7 +69,7 @@
                 <h2 id="too-few-players">At least 4 players are needed to play</h2>
                 <button id="start-game" onclick="beginGame()">Start Game</button>
             </div>
-            <div class="spacer"></div>
+            <div class="spacer-3"></div>
             <div id="player-list"></div>
         </div>
     </script>
@@ -98,6 +97,10 @@
             <div class="join-button">
                 <button>Join</button>
             </div>
+            <div class="spacer-3"></div>
+            <div class="status">
+                <h2>Connecting...</h2>
+            </div>
         </div>
     </script>
     
@@ -108,37 +111,10 @@
 
 <body>
     <main>
-        <div id="join-wrapper">
-            <div class="title">
-                <h2>A</h2>
-                <h1>Fake Artist</h1>
-                <h2>Goes to New York</h2>
-            </div>
-            <br>
-            <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
-            <div class="spacer-5"></div>
-            <div class="input-wrapper">
-                <label for="inputPlayerName">Your Name:</label>
-                <input id="inputPlayerName" type="text">
-            </div>
-            <div class="spacer-2"></div>
-            <div class="input-wrapper">
-                <label for="inputPlayerName">Room ID:</label>
-                <input id="inputPlayerName" type="text">
-            </div>
-            <div class="spacer-5"></div>
-            <div class="join-button">
-                <button>Join</button>
-            </div>
-            <div class="spacer-3"></div>
-            <div class="status">
-                <h2>Connecting...</h2>
-            </div>
-        </div>
     </main>
     
     <script>
-        //$('main').html($('#title-screen-template').html());
+        $('main').html($('#title-screen-template').html());
     </script>
 </body>
 
