@@ -52,16 +52,8 @@
             </p>
         </div>
     </script>
-    
-    <script>
-        var socket = io();
 
-        document.querySelector('main').innerHTML = $('#create-template').html()
-    </script>
-</head>
-
-<body>
-    <main>
+    <script id="create-template" type="text/template">
         <div id="create-screen-wrapper">
             <div class="title">
                 <h2>A</h2>
@@ -81,7 +73,73 @@
             <div class="spacer"></div>
             <div id="player-list"></div>
         </div>
+    </script>
+
+    <script id="join-template" type="text/template">
+        <div id="join-wrapper">
+            <div class="title">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
+            <div class="spacer-5"></div>
+            <div class="input-wrapper">
+                <label for="inputPlayerName">Your Name:</label>
+                <input id="inputPlayerName" type="text">
+            </div>
+            <div class="spacer-2"></div>
+            <div class="input-wrapper">
+                <label for="inputPlayerName">Room ID:</label>
+                <input id="inputPlayerName" type="text">
+            </div>
+            <div class="spacer-5"></div>
+            <div class="join-button">
+                <button>Join</button>
+            </div>
+        </div>
+    </script>
+    
+    <script>
+        var socket = io();
+    </script>
+</head>
+
+<body>
+    <main>
+        <div id="join-wrapper">
+            <div class="title">
+                <h2>A</h2>
+                <h1>Fake Artist</h1>
+                <h2>Goes to New York</h2>
+            </div>
+            <br>
+            <button class="home" onclick="$('main').html($('#title-screen-template').html())">Go back</button>
+            <div class="spacer-5"></div>
+            <div class="input-wrapper">
+                <label for="inputPlayerName">Your Name:</label>
+                <input id="inputPlayerName" type="text">
+            </div>
+            <div class="spacer-2"></div>
+            <div class="input-wrapper">
+                <label for="inputPlayerName">Room ID:</label>
+                <input id="inputPlayerName" type="text">
+            </div>
+            <div class="spacer-5"></div>
+            <div class="join-button">
+                <button>Join</button>
+            </div>
+            <div class="spacer-3"></div>
+            <div class="status">
+                <h2>Connecting...</h2>
+            </div>
+        </div>
     </main>
+    
+    <script>
+        //$('main').html($('#title-screen-template').html());
+    </script>
 </body>
 
 </html>
